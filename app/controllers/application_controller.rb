@@ -83,6 +83,11 @@ get '/Rating/:id' do
   rate.to_json
 end
 
+get '/Rating/:id' do
+  rate = Rate.all
+  rate.to_json
+end
+
 post '/Rating' do 
   rate = Rate.create(
     rating: params[:rating],
