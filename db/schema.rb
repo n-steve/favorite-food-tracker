@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_12_171343) do
-
-  create_table "categories", force: :cascade do |t|
-    t.string "category"
-  end
+ActiveRecord::Schema.define(version: 2022_08_15_005354) do
 
   create_table "foods", force: :cascade do |t|
     t.string "food_name"
-    t.string "location"
-    t.integer "category_id"
-    t.integer "rate_id"
+    t.string "category"
+    t.integer "locations_id"
   end
 
-  create_table "rates", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
+    t.string "location"
+    t.string "name"
+    t.integer "ratings_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
     t.integer "rating"
     t.boolean "like"
   end
