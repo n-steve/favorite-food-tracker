@@ -12,21 +12,22 @@
 
 ActiveRecord::Schema.define(version: 2022_08_15_005354) do
 
+  create_table "cities", force: :cascade do |t|
+    t.string "city_name"
+  end
+
   create_table "foods", force: :cascade do |t|
     t.string "food_name"
-    t.string "category"
-    t.integer "locations_id"
-  end
-
-  create_table "locations", force: :cascade do |t|
     t.string "location"
-    t.string "name"
-    t.integer "ratings_id"
+    t.string "r_name"
+    t.string "review"
+    t.integer "scale"
+    t.integer "city_id"
+    t.integer "frequent_id"
   end
 
-  create_table "ratings", force: :cascade do |t|
-    t.integer "rating"
-    t.boolean "like"
+  create_table "frequents", force: :cascade do |t|
+    t.boolean "go_back"
   end
 
 end
