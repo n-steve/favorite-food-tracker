@@ -7,7 +7,7 @@ puts "🌱 Seeding spices..."
 a1 = City.create(city_name: "Oakland")
 b1 = Frequent.create(go_back: true)
 
-Food.create(food_name: "Pho",location:"",r_name: "Pho Ao Sen",review: "Super Delicious", scale: 5, city_id: a1.id, frequent_id: b1.id)
+Food.create(food_name: "Pho",location:"https://duckduckgo.com/?q=Pho+Ao+Sen&ia=web&iaxm=places",r_name: "Pho Ao Sen",review: "Super Delicious", scale: 5, city_id: a1.id, frequent_id: b1.id)
 
 
 
